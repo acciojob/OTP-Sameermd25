@@ -4,13 +4,14 @@ const form=document.getElementById("form")
 for(let i=0;i<inputSize;i++){
 	const input=document.createElement("input");
 	input.classList.add("code");
+	input.id=`code-${i+1}`;
 	input.innertext=i;
 	input.maxLength="1";
 	input.placeholder="0";
 	form.appendChild(input);	
 }
 const allInputs=document.querySelectorAll(".code");
-allInputs[0].focus();
+//allInputs[0].focus();
 for(let i=0;i<allInputs.length;i++){
 	//for handling otp next
 	allInputs[i].addEventListener("input",(e)=>{
